@@ -989,6 +989,12 @@ func TestGetImageRequests_ImageTypeConversion(t *testing.T) {
 			expectedTargetName: target.TargetNameGCP,
 		},
 		{
+			requestedImageType: ImageTypesGoogle,
+			requestedDistros:   []string{rhel8, centos8, rhel9, centos9},
+			expectedImageType:  "gce",
+			expectedTargetName: target.TargetNameGCP,
+		},
+		{
 			requestedImageType: ImageTypesGcpRhui,
 			requestedDistros:   []string{rhel9},
 			expectedImageType:  "gce",

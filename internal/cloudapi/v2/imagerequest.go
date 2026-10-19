@@ -263,6 +263,8 @@ func getDefaultTarget(imageType ImageTypes) (UploadTypes, error) {
 
 	case ImageTypesGcp:
 		fallthrough
+	case ImageTypesGoogle:
+		fallthrough
 	case ImageTypesGcpRhui:
 		return UploadTypesGcp, nil
 
@@ -322,6 +324,7 @@ func targetSupportMap() map[UploadTypes]map[ImageTypes]bool {
 		},
 		UploadTypesGcp: {
 			ImageTypesGcp:     true,
+			ImageTypesGoogle:  true,
 			ImageTypesGcpRhui: true,
 		},
 		UploadTypesAzure: {

@@ -209,6 +209,8 @@ func imageTypeFromApiImageType(it ImageTypes) string {
 	case ImageTypesAwsSapRhui:
 		return "ec2-sap"
 	case ImageTypesGcp:
+		fallthrough
+	case ImageTypesGoogle:
 		return "gce"
 	case ImageTypesGcpRhui:
 		return "gce-rhui"

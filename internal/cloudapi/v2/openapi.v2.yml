@@ -1462,6 +1462,7 @@ components:
         - edge-container
         - edge-installer
         - gcp
+        - google
         - gcp-rhui
         - guest-image
         - image-installer
